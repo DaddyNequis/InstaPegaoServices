@@ -20,7 +20,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-
+        env:
+          JWT_SECRET: abnxenxhijklmnnxqrstuvnxyz1nx456nx90
+          MONGODB_URL: "mongodb+srv://root:aFJ2Q2Q0Ca3I@cluster0.dbvk5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+          EMAIL_SMTP_HOST: YourSMTPHost
+          EMAIL_SMTP_PORT: YourSMTPPort
+          EMAIL_SMTP_USERNAME: YourSMTPUsername
+          EMAIL_SMTP_PASSWORD: YourSMTPPassword
+          EMAIL_SMTP_SECURE: false
       - name: npm install, build, and test
         run: |
           npm install
