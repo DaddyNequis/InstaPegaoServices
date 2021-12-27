@@ -20,7 +20,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-
+          
+      - name: Create .env file
+        uses: SpicyPizza/create-envfile@v1
+        with:
+          MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          JWT_SECRET: ${{ secrets.JWT_SECRET }}
+          
       - name: npm install, build, and test
         run: |
           npm install
