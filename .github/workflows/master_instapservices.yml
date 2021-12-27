@@ -24,8 +24,8 @@ jobs:
       - name: Create .env file
         uses: SpicyPizza/create-envfile@v1
         with:
-          envkey_JWT_SECRET: ${{ secrets.JWT_SECRET }}
-          envkey_MONGODB_URL: ${{ secrets.MONGODB_URL }}
+          envkey_JWT_SECRET: "abnxenxhijklmnnxqrstuvnxyz1nx456nx90"
+          envkey_MONGODB_URL: "mongodb+srv://root:aFJ2Q2Q0Ca3I@cluster0.dbvk5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
           
       - name: npm install, build, and test
         run: |
