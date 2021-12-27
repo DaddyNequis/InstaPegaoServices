@@ -12,6 +12,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
 
@@ -19,14 +20,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        
-
-
-       - name: Create .env file
-        uses: SpicyPizza/create-envfile@v1
-        with:
-        JWT_SECRET: ${{ secrets.JWT_SECRET }}
-        MONGODB_URL: ${{ secrets.MONGODB_URL }}
 
       - name: npm install, build, and test
         run: |
